@@ -15,7 +15,7 @@ var user = {
 
 var templatetwo = (
     <div>
-        <h1>{(user.userName === "akshay Patil" && user.userAge <= 10) && <p>Age: {user.userAge}</p> }</h1>
+        <h1>{(user.userName === "Akshay Patil" && user.userAge <= 10) && <p>Age: {user.userAge}</p> }</h1>
         <h1>{user.address.userLocation}</h1>
     </div>
 );

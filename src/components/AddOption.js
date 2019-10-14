@@ -14,7 +14,7 @@ export default class AddOption extends React.Component{
     const error = this.props.handleAddOptions(input_val);
     this.setState(()=>{
       return {
-        error
+        error:"Error in processing form data",
       };
     });
     if(!error){

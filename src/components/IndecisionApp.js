@@ -12,15 +12,6 @@ export default class IndecisionApp extends React.Component{
     selectedOption: undefined
    }
 
-  // constructor(props){
-  //   super(props);
-  //   this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-  //   this.handleAddOptions = this.handleAddOptions.bind(this);
-  //   this.handleDeleteOption = this.handleDeleteOption.bind(this);
-  //   // this.state = {
-  //   //   options_arr: []
-  //   // }
-  // }
   componentDidMount(){
     try{
 
@@ -29,16 +20,12 @@ export default class IndecisionApp extends React.Component{
       if(options){
          this.setState(() => ({ options_arr:options }));
       }
-      // console.log("component mounted")
-
     }
     catch(e){}
   }
   componentDidUpdate(prevProps,prevState){
     if(prevState.options_arr.length !== this.state.options_arr.length){
-      const json = JSON.stringify(this.state.options_arr);
-      localStorage.setItem('options',json);
-      console.log("component updated")
+      localStorage.setItem('options',JSON.stringify(this.state.options_arr));
     }
 
   }
@@ -55,7 +42,6 @@ export default class IndecisionApp extends React.Component{
         return optionToRemove !== option;
       })
     }));
-    // console.log(this.state.options_arr)
   }
 
   handleAddOptions = (option) => {
@@ -77,7 +63,6 @@ export default class IndecisionApp extends React.Component{
     this.setState(()=>({
       selectedOption
     }));
-    // alert(this.state.selectedOption);
   }
 
   handleClearModal = ()=>{

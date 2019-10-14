@@ -11,15 +11,6 @@ class Person{
 	}
 }
 
-// class students extends Person{
-
-// constructor(name,age,major){
-// super(name,age);
-// this.major = major;
-// }
-
-// }
-
 class Traveler extends Person{
 	constructor(name,age,homelocation){
 		super(name,age);
@@ -28,7 +19,7 @@ class Traveler extends Person{
 
 	greetings(){
 		if(this.homelocation){
-			return super.greetings()+`. I'am visiting form ${this.homelocation}`;
+			return super.greetings()+`. I'am visiting from ${this.homelocation}`;
 		}else{
 			return super.greetings();
 		}
